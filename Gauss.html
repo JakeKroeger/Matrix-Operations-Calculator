@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gauss Elimination and LU Methods</title>
+    <link rel="stylesheet" href="css/Gauss.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!----- Header ----->
+    <header class="header">
+      <nav>
+        <span><i class="ri-global-fill"></i>NUMEX Calculator</span>
+        <a href="index.html"><i class="ri-home-4-line"></i>Home</a>
+        <a href="Root calc.html"
+          ><i class="ri-calculator-line"></i>Root Calculator</a
+        >
+        <a href="Gauss.html"><i class="ri-brackets-line"></i>Gauss & LU</a>
+      </nav>
+    </header>
+    <!----- Section part ----->
+    <h1>Gauss Elimination and LU Methods</h1>
+
+    <!-- The Matrix table -->
+    <h2>Enter the matrix:</h2>
+    <table id="input-matrix">
+      <tr>
+        <td>
+          <input type="number" id="a00" value="1" class="input-cell" />
+          <label for="text">X1 +</label>
+        </td>
+        <td>
+          <input type="number" id="a01" value="2" class="input-cell" />
+          <label for="text">X2 +</label>
+        </td>
+        <td>
+          <input type="number" id="a02" value="3" class="input-cell" />
+          <label for="text">X3 =</label>
+        </td>
+        <td><input type="number" id="b03" value="6" class="input-cell" /></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="a10" value="4" class="input-cell" />
+          <label for="text">X1 +</label>
+        </td>
+        <td>
+          <input type="number" id="a11" value="5" class="input-cell" />
+          <label for="text">X2 +</label>
+        </td>
+        <td>
+          <input type="number" id="a12" value="6" class="input-cell" />
+          <label for="text">X3 =</label>
+        </td>
+        <td><input type="number" id="b13" value="15" class="input-cell" /></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="a20" value="7" class="input-cell" />
+          <label for="text">X1 +</label>
+        </td>
+        <td>
+          <input type="number" id="a21" value="8" class="input-cell" />
+          <label for="text">X2 +</label>
+        </td>
+        <td>
+          <input type="number" id="a22" value="10" class="input-cell" />
+          <label for="text">X3 =</label>
+        </td>
+        <td><input type="number" id="b23" value="34" class="input-cell" /></td>
+      </tr>
+    </table>
+    <!-- Buttons -->
+    <button onclick="GJE()">Calculate using Gauss Elimination</button>
+
+    <button onclick="LUDecomposition()">
+      Calculate using LU Decomposition
+    </button>
+
+    <button onclick="CramersRule()">Calculate using Cramer's Rule</button>
+
+    <button onclick="GJEwithPivot()">
+      Gauss Elimination with Partial Pivot
+    </button>
+
+    <button onclick="LUDecompositionWithPivot()">
+      LU with Partial Pivoting
+    </button>
+
+    <button onclick="clearTable()">Clear</button>
+
+    <!-- The Result table -->
+    <h2>Result:</h2>
+    <div id="clarificationResult"></div>
+
+    <div id="matrixResult"></div>
+
+    <div id="variableResult"></div>
+
+    <script src="js/Gauss.js"></script>
+  </body>
+</html>

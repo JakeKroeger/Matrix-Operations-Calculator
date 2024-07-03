@@ -1,0 +1,36 @@
+False Position Example: 
+-13-20x+19x^2-3x^3
+Xl = -1 Xu = 0  Eps = 1
+-26+82.3x-88x^2+45.4x^3-9x^4+0.65x^5
+xl = 0.5 xu = 1 eps = 0.2%
+
+Bisection Example : 
+-2+7x-5x^2+6x^3
+xl = 0 xu = 1 eps = 10
+
+Simple Fixed Example : 
+-0.9x^2+1.7x+2.5 (used also for Newton)
+sqrt(1.9x+2.8)
+x0 = 5 , error = 0.7
+
+
+SecantQuestion : 
+0.95x^3-5.9x^2+10.9x-6
+xi-1 = 2.5 
+xi = 3.5
+Eps = 0.5
+
+Gauss Elimination Question :
+2x1+x2-x3=1
+5x1+2x2+2x3=-4
+3x1+x2+x3=5
+
+x1 =14 , x2 = -32 , x3 = -5
+
+LU Decomposition Question :
+2x1+x2-x3=1
+5x1+2x2+2x3=-4
+3x1+x2+x3=5
+
+x1= 14 , x2 = -32 , x3 = -5
+

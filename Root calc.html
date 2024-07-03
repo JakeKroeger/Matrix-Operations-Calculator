@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Root Calculator</title>
+    <link rel="stylesheet" href="css/Root.css" />
+    <script src="js/Root.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.5.1/math.min.js"></script>
+  </head>
+  <body>
+    <!----- Header ----->
+    <header class="header">
+      <nav>
+        <span><i class="ri-global-fill"></i>NUMEX Calculator</span>
+        <a href="index.html"><i class="ri-home-4-line"></i>Home</a>
+        <a href="Root calc.html"
+          ><i class="ri-calculator-line"></i>Root Calculator</a
+        >
+        <a href="Gauss.html"><i class="ri-brackets-line"></i>Gauss & LU</a>
+      </nav>
+    </header>
+    <h1>Root Calculator</h1>
+
+    <div class="DataClass">
+      <div class="row1">
+        <!--Equation input -->
+        <label for="equation" class="text">Enter your Equation :</label>
+        <input type="text" id="equation" />
+        <br />
+
+        <!--Value for Xl and Xu and Eps-->
+        <label for="xValue" id="XlText" class="text"
+          >Enter value for Xl :</label
+        >
+        <input type="text" id="xl" />
+
+        <!--XIminus1-->
+        <label
+          for="xiMinus1"
+          id="xiMinus1Text"
+          style="display: none"
+          class="text"
+          >Enter Value for Xi-1</label
+        >
+        <input type="text" id="XiMinus1" style="display: none" />
+        <br />
+      </div>
+
+      <div class="row2">
+        <!--XU-->
+        <label for="xValue" id="XuText" class="text"
+          >Enter value for Xu :
+        </label>
+        <input type="text" id="xu" />
+
+        <!--EPS-->
+        <label for="xValue" class="text">Enter value for Eps : </label>
+        <input type="text" id="eps" />
+        <br />
+      </div>
+
+      <!--XI-->
+      <label for="XiValue" id="XiText" style="display: none" class="text"
+        >Enter the value of Xi</label
+      >
+      <input type="text" id="xi" style="display: none" />
+      <br />
+
+      <br />
+
+      <div>
+        <!--Buttons-->
+        <button onclick="clearTable()">Clear</button>
+        <button onclick="choice()">Calculate</button>
+
+        <!--Choosing the Method-->
+        <select name="options" id="options" onchange="ChoiceManager()">
+          <option value="BisectionMethod">Bisection Method</option>
+          <option value="FalsePosition">False Position Method</option>
+          <option value="FixedPoint">Simple Fixed Point Method</option>
+          <option value="NewtonMethod">Newton's Method</option>
+          <option value="SecanttMethod">Secantt's Method</option>
+        </select>
+      </div>
+    </div>
+    <p id="Display"></p>
+
+    <div id="Table"></div>
+  </body>
+  <footer>
+    <p>
+      <i class="ri-copyright-line"></i>Numerical Project 2023 <br />
+      Thank You for visiting our website <i class="ri-hand-heart-line"></i>
+    </p>
+    <br />
+  </footer>
+</html>
